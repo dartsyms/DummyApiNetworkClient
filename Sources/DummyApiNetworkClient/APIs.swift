@@ -6,6 +6,14 @@
 
 import Foundation
 
+open class DummyAPIConfig {
+    public static var basePath = "https://dummyapi.io/data/api"
+    public static var credential: URLCredential?
+    public static var customHeaders: [String: String] = [:]
+    public static var requestBuilderFactory: RequestBuilderFactory = URLSessionRequestBuilderFactory()
+    public static var apiResponseQueue: DispatchQueue = .main
+}
+
 open class RequestBuilder<T> {
     var credential: URLCredential?
     var headers: [String:String]
